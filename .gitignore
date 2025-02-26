@@ -1,4 +1,4 @@
 .env
-twitch_vods.xlsx
+*.xlsx
 venv/
 __pycache__/
