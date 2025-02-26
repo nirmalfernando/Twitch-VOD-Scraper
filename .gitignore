@@ -1,0 +1,4 @@
+.env
+twitch_vods.xlsx
+venv/
+__pycache__/
