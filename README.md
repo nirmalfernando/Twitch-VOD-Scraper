@@ -34,11 +34,11 @@ cd Twitch-VOD-Scraper
 2. **(Optional) Create a virtual environment:**
 ```bash
 # For Linux/Mac
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 
 # For Windows
-python -m venv venv
+python3 -m venv venv
 venv\Scripts\activate
 ```
 
@@ -86,3 +86,14 @@ Twitch-VOD-Scraper/
 └── .gitignore                  # Ignore unnecessary files (like .env and Excel files)
 ```
 
+## Output files
+- twitch_vods.xlsx — Contains all the VODs retrieved from the Twitch API.
+- filtered_twitch_vods.xlsx — Contains only VODs with a duration under 11 hours, 59 minutes, and 58 seconds.
+
+## Troubleshooting
+- **Missing Videos:**
+You may notice that the number of videos retrieved is sometimes lower than the actual number of VODs on the broadcaster's channel. Despite handling pagination and making multiple attempts, the results remain consistent — leading to the conclusion that this could be an API behavior or limitation. If you experience this, double-check your API permissions and try again later.
+- **Authentication Errors:**
+Ensure your CLIENT_ID and CLIENT_SECRET are correct and that your app has the required permissions.
+- **Excel File Not Found:**
+Make sure twitch_vods.xlsx exists before running the filter_vods.py script.
